@@ -43,4 +43,18 @@ routes.delete('/:id', (req,res)=>{
     })
 })
 
+routes.put('/:id', (req,res)=>{
+    req.getConnection((err,conn)=>{
+        if(err)
+            return res.send(err)
+            
+        conn.query('UPDATE books SET ? WHERE id=?', [req.body,req.params.id], (err,rows)=>{
+            if(err)
+                return res.send(err)
+
+            res.json('Book updated successfully!')
+        })
+    })
+})
+
 module.exports = routes
