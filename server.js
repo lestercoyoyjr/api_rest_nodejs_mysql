@@ -2,6 +2,9 @@ const express = require('express')
 const mysql = require('mysql')
 const myconn = require('express-myconnection')
 
+// call to routes.js -------------------------------------------
+const routes = require('./routes')
+
 const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbOptions = {
@@ -20,9 +23,7 @@ app.use(myconn(mysql,dbOptions,'single'))
 app.get('/', (req,res)=>{
     res.send('Welcome to my API')
 })
-app.get('/api', (req,res)=>{
-    res.send('testing api')
-})
+app.use('/api', routes)
 
 // Server running -----------------------------------------------
 app.listen(app.get('port'), ()=>{
