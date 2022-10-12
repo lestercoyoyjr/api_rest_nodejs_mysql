@@ -1,0 +1,23 @@
+{
+  "name": "api_rest_nodejs_mysql",
+  "version": "1.0.0",
+  "description": "How to create an API REST with Node js & MySQL | CRUD (Create, Read, Update, Delete)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lestercoyoyjr/api_rest_nodejs_mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lestercoyoyjr/api_rest_nodejs_mysql/issues"
+  },
+  "homepage": "https://github.com/lestercoyoyjr/api_rest_nodejs_mysql#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
